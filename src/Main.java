@@ -18,15 +18,16 @@ public class Main {
         System.out.println("Второе задание готово");
 
         int bananas = 5;
-        int milk = 200;
+        int milk = 200 / 100;
         int iceCream = 2;
         int eggs = 4;
-        bananas = bananas * 80;
-        milk = milk / 100 * 105;
-        iceCream = iceCream * 100;
-        eggs = eggs * 70;
-        double SumWeight = (bananas + milk + iceCream + eggs);
-        SumWeight = SumWeight / 1000;
+        int bananasWeight = 80;
+        int milkWeight = 105;
+        int iceCreamWeight = 100;
+        int eggsWeight = 70;
+        double SumWeight = (bananas * bananasWeight) + (milk * milkWeight) + (iceCream * iceCreamWeight) + (eggs * eggsWeight);
+        int gramsInKg = 1000;
+        SumWeight = SumWeight / gramsInKg;
         System.out.println("Вес такого спорт-завтрака равен " + SumWeight + " кг!");
         System.out.println("Третье задание готово");
 
@@ -36,7 +37,7 @@ public class Main {
         int DaysToEndVersion1;
         int DaysToEndVersion2;
         int AverageDaysToEnd;
-        NeedToLose = NeedToLose * 1000;
+        NeedToLose = NeedToLose * gramsInKg;
 
         DaysToEndVersion1 = NeedToLose / DietVersion1;
         System.out.println("Если спортсмен будет терять по " + DietVersion1 + " грамм в день, то на похудение ему понадобится " + DaysToEndVersion1 + " дней");
@@ -49,6 +50,7 @@ public class Main {
 
         System.out.println("Четвёртое задание готово");
 
+        int percent = 10;
         int MoneyMashaOldMonth = 67760;
         int MoneyMashaNewMonth;
         int MoneyDenisOldMonth = 83690;
@@ -58,14 +60,15 @@ public class Main {
         int MoneyMashaDifferenceYears;
         int MoneyDenisDifferenceYears;
         int MoneyKristyDifferenceYears;
+        int monthInYear = 12;
 
-        MoneyMashaNewMonth = (MoneyMashaOldMonth / 10) + MoneyMashaOldMonth;
-        MoneyDenisNewMonth = (MoneyDenisOldMonth / 10) + MoneyDenisOldMonth;
-        MoneyKristyNewMonth = (MoneyKristyOldMonth / 10) + MoneyKristyOldMonth;
+        MoneyMashaNewMonth = (MoneyMashaOldMonth / percent) + MoneyMashaOldMonth;
+        MoneyDenisNewMonth = (MoneyDenisOldMonth / percent) + MoneyDenisOldMonth;
+        MoneyKristyNewMonth = (MoneyKristyOldMonth / percent) + MoneyKristyOldMonth;
 
-        MoneyMashaDifferenceYears = (MoneyMashaNewMonth * 12) - (MoneyMashaOldMonth * 12);
-        MoneyDenisDifferenceYears = (MoneyDenisNewMonth * 12) - (MoneyDenisOldMonth * 12);
-        MoneyKristyDifferenceYears = (MoneyKristyNewMonth * 12) - (MoneyKristyOldMonth * 12);
+        MoneyMashaDifferenceYears = (MoneyMashaNewMonth * monthInYear) - (MoneyMashaOldMonth * monthInYear);
+        MoneyDenisDifferenceYears = (MoneyDenisNewMonth * monthInYear) - (MoneyDenisOldMonth * monthInYear);
+        MoneyKristyDifferenceYears = (MoneyKristyNewMonth * monthInYear) - (MoneyKristyOldMonth * monthInYear);
 
         System.out.println("Теперь Маша получает " + MoneyMashaNewMonth + " рублей. А годовой доход вырос на " + MoneyMashaDifferenceYears + " рублей!");
         System.out.println("Теперь Денис получает " + MoneyDenisNewMonth + " рублей. А годовой доход вырос на " + MoneyDenisDifferenceYears + " рублей!");
